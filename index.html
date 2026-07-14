@@ -344,16 +344,20 @@ Board-focused practice and revision sessions.
 <h2>Contact Us</h2>
 </div>
 
-<form class="contact-form">
+<form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
 
-<input type="text" placeholder="Your Name">
+<input type="hidden" name="access_key" value="1753c3d1-8e63-483f-b579-ced2fc7e37fd">
 
-<input type="email" placeholder="Email">
+<input type="text" name="name" placeholder="Your Name" required>
 
-<textarea placeholder="Your Message"></textarea>
+<input type="email" name="email" placeholder="Your Email" required>
 
-<button>Send Message</button>
+<textarea name="message" placeholder="Your Message" required></textarea>
 
+<button type="submit">Send Message</button>
+<p id="success-message" style="display:none; color:green; margin-top:15px; font-weight:bold;">
+✅ Message sent successfully!
+</p>
 </form>
 
 </section>
@@ -361,7 +365,7 @@ Board-focused practice and revision sessions.
 
 <script src="script.js"></script>
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/923001234567" class="whatsapp-btn" target="_blank">
+<a href="https://wa.me/923063276090" class="whatsapp-btn" target="_blank">
     💬
 </a>
 
@@ -385,8 +389,8 @@ Board-focused practice and revision sessions.
 <div>
 <h4>Contact</h4>
 <p>Karachi, Pakistan</p>
-<p>+92 300 1234567</p>
-<p>info@eliteacademy.com</p>
+<p>+92 3063276090</p>
+<p>afatsummitah@gmail.com</p>
 </div>
 
 </div>
