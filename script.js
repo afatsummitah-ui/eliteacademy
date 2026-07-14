@@ -31,26 +31,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 const form = document.getElementById("contactForm");
+const toast = document.getElementById("toast");
 
-form.addEventListener("submit", async function (e) {
+form.addEventListener("submit", async function(e){
+
     e.preventDefault();
 
     const data = new FormData(form);
 
-    const response = await fetch(form.action, {
-        method: "POST",
-        body: data
+    const response = await fetch(form.action,{
+        method:"POST",
+        body:data
     });
 
-    if (response.ok) {
-        document.getElementById("success-message").style.display = "block";
+    if(response.ok){
+
+        toast.classList.add("show");
+
         form.reset();
 
-        // Hide the message after 5 seconds
-        setTimeout(() => {
-            document.getElementById("success-message").style.display = "none";
-        }, 5000);
-    } else {
-        alert("Something went wrong. Please try again.");
+        setTimeout(()=>{
+            toast.classList.remove("show");
+        },3000);
+
+    }else{
+
+        alert("Something went wrong!");
+
     }
+
 });
