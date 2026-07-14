@@ -667,3 +667,30 @@ opacity:1;
 transform:translateY(0);
 
 }
+/* SUCCESS TOAST */
+
+.toast{
+    position:fixed;
+    top:25px;
+    right:25px;
+    background:#16a34a;
+    color:#fff;
+    padding:16px 24px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateX(120%);
+    transition:all .4s ease;
+
+    z-index:9999;
+}
+
+.toast.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateX(0);
+}
